@@ -1,18 +1,16 @@
-beautifulsoup4   4.9.3
-bs4              0.0.1
-certifi          2020.12.5
-chardet          4.0.0
-gitdb            4.0.5
-GitPython        3.1.12
-heroku           0.1.4
-heroku-git-fs    1.0.0
-idna             2.10
-pip              19.0.3
+beautifulsoup4 == 4.9.3
+bs4 == 0.0.1
+certifi == 2020.12.5
+chardet == 4.0.0
+gitdb == 4.0.5
+GitPython == 3.1.12
+idna == 2.10
+pip == 19.0.3
 pyTelegramBotAPI 3.7.6
 python-dateutil  1.5
-requests         2.25.1
-selenium         3.141.0
-setuptools       40.8.0
-smmap            3.0.4
-soupsieve        2.1
-urllib3          1.26.2
+requests == 2.25.1
+selenium == 3.141.0
+setuptools == 40.8.0
+smmap == 3.0.4
+soupsieve == 2.1
+urllib3 == 1.26.2
