@@ -4,8 +4,8 @@ from bs4 import BeautifulSoup
 import requests
 from selenium import webdriver
 bot = telebot.TeleBot('1568111312:AAFDLr5-uhe-xdNJDKCk0CM64FOY55bROFA')
-DRIVER = 'chromedriver'
-driver = webdriver.Chrome(DRIVER)
+#DRIVER = 'chromedriver'
+#driver = webdriver.Chrome(DRIVER)
 @bot.message_handler(commands=['start'])
 def start(message):
     #Кнопки для бота
@@ -28,9 +28,9 @@ def mess(message):
         soup = BeautifulSoup(full_page.content,'html.parser')
         convert = soup.findAll("span",{"class": "arial_26 inlineblock pid-1057391-last","id":"last_last"})
         final_message = f"1 Bitcoin = {convert[0].text} $."
-        driver.get('https://www.binance.com/ru/trade/BTC_BUSD')
-        element = driver.save_screenshot("bitcoin.png")
-        bot.send_photo(message.chat.id,open('bitcoin.png','rb'))
+        #driver.get('https://www.binance.com/ru/trade/BTC_BUSD')
+        #element = driver.save_screenshot("bitcoin.png")
+        #bot.send_photo(message.chat.id,open('bitcoin.png','rb'))
     elif get_message_bot == "ethreum":
         Ethreum = 'https://ru.investing.com/crypto/ethereum/eth-usd?cid=997650'
         header_1 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36'}
@@ -38,9 +38,9 @@ def mess(message):
         soup_1 = BeautifulSoup(full_page_1.content, 'html.parser')
         convert_1 = soup_1.findAll("span", {"class": "arial_26 inlineblock pid-997650-last","id":"last_last"})
         final_message = f"1 Ethreum = {convert_1[0].text} $"
-        driver.get('https://www.binance.com/ru/trade/ETH_BUSD')
-        element = driver.save_screenshot("ethreum.png")
-        bot.send_photo(message.chat.id, open('ethreum.png', 'rb'))
+        #driver.get('https://www.binance.com/ru/trade/ETH_BUSD')
+        #element = driver.save_screenshot("ethreum.png")
+        #bot.send_photo(message.chat.id, open('ethreum.png', 'rb'))
     elif get_message_bot == "xrp":
         XRP = 'https://ru.investing.com/crypto/xrp/xrp-usd'
         header_2 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36'}
@@ -48,9 +48,9 @@ def mess(message):
         soup_2 = BeautifulSoup(full_page_2.content, 'html.parser')
         convert_2 = soup_2.findAll("span", {"class": "arial_26 inlineblock pid-1118146-last","id":"last_last"})
         final_message = f"1 XRP = {convert_2[0].text} $"
-        driver.get('https://www.binance.com/ru/trade/XRP_BUSD?layout=pro')
-        element = driver.save_screenshot("xrp.png")
-        bot.send_photo(message.chat.id, open('xrp.png', 'rb'))
+        #driver.get('https://www.binance.com/ru/trade/XRP_BUSD?layout=pro')
+        #element = driver.save_screenshot("xrp.png")
+        #bot.send_photo(message.chat.id, open('xrp.png', 'rb'))
     elif get_message_bot == "cardano":
         Cardano = 'https://ru.investing.com/crypto/cardano/ada-usd'
         header_3 = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36'}
@@ -58,9 +58,9 @@ def mess(message):
         soup_3 = BeautifulSoup(full_page_3.content, 'html.parser')
         convert_3 = soup_3.findAll("span", {"class": "arial_26 inlineblock pid-1073899-last","id":"last_last"})
         final_message = f"1 Cardano = {convert_3[0].text} $"
-        driver.get('https://www.binance.com/ru/trade/ADA_BUSD?layout=pro')
-        element = driver.save_screenshot("cardano.png")
-        bot.send_photo(message.chat.id, open('cardano.png', 'rb'))
+        #driver.get('https://www.binance.com/ru/trade/ADA_BUSD?layout=pro')
+        #element = driver.save_screenshot("cardano.png")
+        #bot.send_photo(message.chat.id, open('cardano.png', 'rb'))
     else:
         final_message = f"<u>Курс данной криптовалюты отсутствует в боте</u>"
     bot.send_message(message.chat.id,final_message,parse_mode="html")
