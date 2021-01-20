@@ -6,8 +6,8 @@ gitdb == 4.0.5
 GitPython == 3.1.12
 idna == 2.10
 pip == 19.0.3
-pyTelegramBotAPI 3.7.6
-python-dateutil  1.5
+pyTelegramBotAPI == 3.7.6
+python-dateutil == 1.5
 requests == 2.25.1
 selenium == 3.141.0
 setuptools == 40.8.0
