@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 import requests
 from selenium import webdriver
 bot = telebot.TeleBot('1568111312:AAFDLr5-uhe-xdNJDKCk0CM64FOY55bROFA')
-DRIVER = 'D:\chromeDriver\chromedriver'
+DRIVER = 'chromedriver'
 driver = webdriver.Chrome(DRIVER)
 @bot.message_handler(commands=['start'])
 def start(message):
